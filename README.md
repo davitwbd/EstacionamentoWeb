@@ -16,9 +16,6 @@ Initial Characteristics:
 - Only one ManegedBean (ControllerBean) - JSF.
 - Some screenshots in xhtml using PrimeFaces.
 
-This project does not pretend to represent a complete system, 
-but to apply the knowledge of these technologies and contribute.
-
   Libraries Used:
   - Java    
   - Morraja JSF      (javax.faces-2.2.8) 
@@ -27,6 +24,9 @@ but to apply the knowledge of these technologies and contribute.
   - MySql            (msql-connector-java-5.0.8-bin)
 
   Server: Apache TomCat 8.0
+ 
+This project does not pretend to represent a complete system, 
+but to apply the knowledge of these technologies and contribute.
 ------------------------------------------------------------------
 Sistema Web "Estacionamento" 
 
@@ -44,9 +44,6 @@ Caracteristicas iniciais:
 - Possue apenas um ManegedBean (ControladorBean) - JSF.
 - Algumas telas em xhtml usando PrimeFaces.
 
-Este projeto não tem a pretenção de representar um sistema completo,
-mas sim aplicar o conhecimento dessas tecnologias e contribuir.
-
   Bibliotecas utilizadas:
   - Java
   - Morraja JSF      (javax.faces-2.2.8) 
@@ -55,4 +52,7 @@ mas sim aplicar o conhecimento dessas tecnologias e contribuir.
   - MySql            (msql-connector-java-5.0.8-bin)
 
   Servidor: Apache TomCat 8.0
+  
+Este projeto não tem a pretenção de representar um sistema completo,
+mas sim aplicar o conhecimento dessas tecnologias e contribuir.
 --------------------------------------------------------------------
