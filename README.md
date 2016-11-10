@@ -5,8 +5,8 @@ Web System "Parking"
 This is a web project of a Parking (MVC Pattern).
 
 It was created just to train some technologies and
-To collaborate with a basic model of a web application
-for starters.
+to collaborate with a basic model of a web application
+for beginners.
 
 Initial technologies:
 JSF, PrimeFaces, Java.
