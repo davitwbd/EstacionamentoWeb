@@ -25,8 +25,9 @@ Initial Characteristics:
 
   Server: Apache TomCat 8.0
  
-This project does not pretend to represent a complete system, 
+This project does not pretend to represent a complete system,
 but to apply the knowledge of these technologies and contribute.
+
 ------------------------------------------------------------------
 Sistema Web "Estacionamento" 
 
