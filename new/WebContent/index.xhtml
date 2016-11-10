@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Meu Estacionamento</title>
+	<h:outputStylesheet library="css" name="style.css"/>
+	<link rel="icon" type="image/x-icon" href="resources/icon/icon-principal.png"/>
+</h:head>
+
+<h:body> 
+    <h:link outcome="/index?faces-redirect=true">
+    	<h:graphicImage library="icon" width="100px" height="100px" name="icon-carro-amarelo.png" />
+	</h:link>
+	<h:outputText value="Seja Bem Vindo !!!" style="font-size:45px; color: white; position:absolute; margin-top:200px; margin-left:250px"/>
+	
+	<h:form style="margin-top:200px; margin-left:450px">
+	    <p:commandButton value="Iniciar" action="/RegistroDoEstacionamento?faces-redirect=true"/>
+   </h:form>
+</h:body>
+
+</html>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Meu Estacionamento</title>
+	<h:outputStylesheet library="css" name="style.css" />
+	<link rel="icon" type="image/x-icon"
+		href="resources/icon/icon-principal.png" />
+</h:head>
+
+<h:body>
+	<h:link outcome="/index?faces-redirect=true">
+		<h:graphicImage library="icon" width="100px" height="100px"
+			name="icon-carro-amarelo.png" />
+	</h:link>
+
+	<h:form>
+
+		<!-- INICIO DO PAINEL DO CARRO SELECIONADO-->
+		<p:panel header="Carro Selecionado!" style="width: 550px; margin:auto;">
+			  
+			<h:panelGrid columns="2">
+				<h:outputLabel value="Modelo:" />
+				<h:panelGroup>
+					<p:inputText id="modelo" label="Modelo" size="35" required="true"
+						value="#{controladorBean.carroSelecionado.modelo}" />
+
+					<p:watermark for="modelo" value="Digite o Modelo" />
+				</h:panelGroup>
+
+				<h:outputLabel value="Placa:" />
+				<h:panelGroup>
+					<p:inputText id="placa" label="Placa" size="35"
+						value="#{controladorBean.carroSelecionado.placa}" required="true">
+					</p:inputText>
+
+					<p:watermark for="placa" value="Digite a Placa aqui" />
+				</h:panelGroup>
+
+				<h:outputLabel value="cor:" />
+				<h:panelGroup>
+					<p:inputText id="cor" label="Cor" size="35"
+						value="#{controladorBean.carroSelecionado.cor}" required="true">
+					</p:inputText>
+
+					<p:watermark for="cor" value="Digite a Cor aqui" />
+				</h:panelGroup>
+
+				<h:outputLabel />
+				<h:panelGroup>
+					<p:commandButton value="Alterar" ajax="false" icon="ui-icon-check"
+						action="#{controladorBean.atualizarCarro}" validateClient="true"
+						style="margin-right:10px">
+					</p:commandButton>
+					
+					<p:commandButton value="Excluir" ajax="false" 
+						action="#{controladorBean.excluirCarro}" validateClient="true"
+						style="margin-right:10px">
+					</p:commandButton>
+					
+					<p:commandButton value="Cancelar" ajax="false" 
+						action="/RegistroDoEstacionamento?faces-redirect=true" validateClient="true"
+						style="margin-right:10px">
+					</p:commandButton>
+
+				</h:panelGroup>
+			</h:panelGrid>
+		</p:panel>
+		<!-- FIM >> DO PAINEL DO CARRO -->
+
+	</h:form>
+</h:body>
+
+</html>

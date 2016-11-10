@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Meu Estacionamento</title>
+	<h:outputStylesheet library="css" name="style.css" />
+	<link rel="icon" type="image/x-icon"
+		href="resources/icon/icon-principal.png" />
+</h:head>
+
+<h:body>
+	<h:link outcome="/index?faces-redirect=true">
+		<h:graphicImage library="icon" width="100px" height="100px"
+			name="icon-carro-amarelo.png" />
+	</h:link>
+
+	<h:form>
+
+		<!-- INICIO DO PAINEL DE CADASTRO DO CARRO -->
+		<p:panel header="Novo Carro!" style="width: 500px; margin:auto;">
+			  
+			<h:panelGrid columns="2">
+				<h:outputLabel value="Modelo:" />
+				<h:panelGroup>
+					<p:inputText id="modelo" label="Modelo" size="35" required="true"
+						value="#{controladorBean.carroNovo.modelo}" />
+
+					<p:watermark for="modelo" value="Digite o Modelo" />
+				</h:panelGroup>
+
+				<h:outputLabel value="Placa:" />
+				<h:panelGroup>
+					<p:inputText id="placa" label="Placa" size="35"
+						value="#{controladorBean.carroNovo.placa}" required="true">
+					</p:inputText>
+
+					<p:watermark for="placa" value="Digite a Placa aqui" />
+				</h:panelGroup>
+
+				<h:outputLabel value="cor:" />
+				<h:panelGroup>
+					<p:inputText id="cor" label="Cor" size="35"
+						value="#{controladorBean.carroNovo.cor}" required="true">
+					</p:inputText>
+
+					<p:watermark for="cor" value="Digite a Cor aqui" />
+				</h:panelGroup>
+
+				<h:outputLabel />
+				<h:panelGroup>
+					<p:commandButton value="Salvar" ajax="false" icon="ui-icon-check"
+						action="#{controladorBean.salvarCarro}" validateClient="true"
+						style="margin-right:10px">
+					</p:commandButton>
+
+				</h:panelGroup>
+			</h:panelGrid>
+		</p:panel>
+		<!-- FIM >> DO PAINEL DE CADASTRO DO CARRO -->
+
+		<br />
+		<br />
+		<br />
+		<!-- pulando linha com br -->
+
+		<!-- INICIO - Tabela dos carros Estacionados -->
+		<p:dataTable var="carro" value="#{controladorBean.carrosEstacionados}"
+			widgetVar="carrosTable" emptyMessage="Nenhum carro estacionado"
+			selection="#{controladorBean.carroSelecionado}"
+			selectionMode="single" rowKey="#{carro.id}" paginator="true"
+			paginatorPosition="bottom" rows="8">
+           
+			<f:facet name="header">
+				<p:outputPanel>
+					<h:outputText value="Carros Estacionados:" />
+				</p:outputPanel>
+			</f:facet>
+
+			<p:column headerText="Modelo" style="text-align: center;">
+				<h:outputText value="#{carro.modelo}" />
+			</p:column>
+
+			<p:column headerText="Cor" style="text-align: center;">
+				<h:outputText value="#{carro.cor}" />
+			</p:column>
+
+			<p:column headerText="Placa" style="text-align: center;">
+				<h:outputText value="#{carro.placa}" />
+			</p:column>
+
+			<p:column headerText="Editar" style="text-align: center;" >
+				<h:commandLink action="/carroSelecionado?faces-redirect=true" immediate="true">
+					<h:graphicImage library="icon" name="editar.png" />
+					
+					<f:setPropertyActionListener value="#{carro}"
+							target="#{controladorBean.carroSelecionado}" />
+				</h:commandLink>
+								
+			</p:column>
+
+		</p:dataTable>
+
+		<!-- FIM >> Tabela dos carro registrados -->
+
+	</h:form>
+</h:body>
+
+</html>

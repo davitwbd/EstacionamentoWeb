@@ -1,0 +1,33 @@
+@charcet "utf-8";
+
+body{
+ background-image: url("../resources/imagens/fundo1.jpg");
+ background-size:100%;
+ background-repeat: no-repeat;
+ font-family: calibri;
+ width: 960px;
+ height:auto;
+ margin: auto;/* centraliza */ 
+}
+
+table.tabelaPadrao{	
+	font-size:23px; 
+	margin: auto; 
+	padding: 1px;		
+} 
+
+table.tabelaPadrao tr:hover{	
+	font-size:23px; 
+	color: white;
+	margin: 10px; 
+	padding: 1px;
+	background-color: gray;
+}
+
+table tr.cor-sim{
+	background-color: white;
+}
+
+table tr.cor-nao{
+	background-color: white;
+}
