@@ -36,6 +36,6 @@ Caracteristicas iniciais:
 - Possue apenas um ManegedBean (ControladorBean) - JSF.
 - Algumas telas em xhtml usando PrimeFaces.
 
-Este projeto não tem a pretenção de construir um sistema completo, 
+Este projeto não tem a pretenção de construir um sistema completo,
 mas sim aplicar o conhecimento dessas tecnologias e contribuir.
 --------------------------------------------------------------------
