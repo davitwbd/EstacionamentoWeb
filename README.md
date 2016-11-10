@@ -56,4 +56,5 @@ Caracteristicas iniciais:
   
 Este projeto não tem a pretenção de representar um sistema completo,
 mas sim aplicar o conhecimento dessas tecnologias e contribuir.
+
 --------------------------------------------------------------------
