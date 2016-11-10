@@ -10,24 +10,3 @@ body{
  margin: auto;/* centraliza */ 
 }
 
-table.tabelaPadrao{	
-	font-size:23px; 
-	margin: auto; 
-	padding: 1px;		
-} 
-
-table.tabelaPadrao tr:hover{	
-	font-size:23px; 
-	color: white;
-	margin: 10px; 
-	padding: 1px;
-	background-color: gray;
-}
-
-table tr.cor-sim{
-	background-color: white;
-}
-
-table tr.cor-nao{
-	background-color: white;
-}
